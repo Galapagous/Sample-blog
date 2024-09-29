@@ -1,0 +1,46 @@
+version: '3'
+services:
+  # MongoDB service
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+  # Redis service
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+
+  # Node.js backend service
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: mern-backend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb
+      - redis
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/myapp
+      - REDIS_URI=redis://redis:6379
+
+  # React frontend service
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: mern-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  mongodb_data:

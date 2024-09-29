@@ -1,0 +1,43 @@
+.footerContainer{
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.topArea{
+    background-color: rgb(39, 39, 39);
+    color: white;
+    padding: 10px 100px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.topArea h2{
+    margin-bottom: 15px;
+}
+
+.topArea p{
+    margin-bottom: 5px;
+}
+
+.socialLinks{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* -------------bottom area----------------- */
+.bottomArea{
+    background-color: rgb(65, 65, 65);
+    color: white;
+    padding: 20px 100px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.designer span:nth-child(1){
+    border-right: 2px solid white;
+    margin-right: 10px;
+    padding-right: 10px;
+}

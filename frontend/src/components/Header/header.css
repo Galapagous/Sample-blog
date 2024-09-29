@@ -1,0 +1,164 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.Headercontainer{
+    width: 100%;
+    overflow-x: auto;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.Headercontainer::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .6;
+}
+
+.Headercontainer .wrapper{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    color: gray;
+    position: relative;
+    z-index: 3;
+}
+
+.Headerwrapper .headerLogo{
+    font-size: 1rem;
+    font-weight: 500;
+    color: tomato;
+}
+
+.Headerwrapper ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    text-decoration: none;
+    position: relative;
+    z-index: 4;
+}
+
+.Headerwrapper ul li{
+    list-style: none;
+    transition: all;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in;
+    padding-bottom: 3px;
+}
+
+.Headerwrapper ul li:hover{
+    color: tomato;
+}
+
+.Headerwrapper a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.Headerwrapper select,input{
+    padding: 4px 3px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+}
+
+.Headerwrapper select option{
+    background-color: rgb(48, 48, 48);
+    color: rgb(209, 209, 209);
+    padding: 1.5px 2px;
+    font-size: .9rem;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 3px 5px;
+    background-color: white;
+}
+
+.search svg{
+    color: tomato;
+    cursor: pointer;
+}
+
+li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+li svg{
+    color: tomato;
+    cursor: pointer;
+}
+
+
+/* -----------Hamburger menu----------- */
+.hamburger{
+    cursor: pointer;
+    display: none;
+}
+
+.bar{
+    width: 25px;
+    height: 2.5px;
+    border-radius: 3px;
+    background-color: white;
+    margin-bottom: 4px;
+}
+/* -----------Hamburger menu----------- */
+
+
+
+/* -----------Mobile view----------- */
+@media screen and (max-width: 480px) {
+    .Headercontainer {
+        overflow: visible; /* Change from overflow-x: auto */
+    }
+
+    .Headerwrapper ul {
+        position: fixed; /* Change from absolute to fixed */
+        z-index: 1000; /* Increase z-index */
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70vw; /* Reduce width to leave some space on the left */
+        padding-top: 60px; /* Add some padding at the top */
+    }
+
+    .restore {
+        transform: translateX(100%);
+    }
+
+    .move {
+        transform: translateX(0);
+    }
+
+    .Headerwrapper {
+        position: relative;
+        z-index: 1001; /* Ensure the wrapper is above the menu */
+    }
+
+    .hamburger {
+        z-index: 1002; /* Ensure the hamburger is above everything */
+        position: relative;
+    }
+
+    .search{
+        display: none;
+    }
+}

@@ -1,0 +1,179 @@
+:root{
+    --primar-color: rgb(1, 1, 26);
+}
+
+.signinContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.signinWrapper{
+    width: 60%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--primar-color);
+}
+
+.signinLeft{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.signinLeft::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--primar-color);
+    opacity: .7;
+    z-index: 2;
+}
+
+.signinLeft img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.signinText{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 3;
+    color: white;
+}
+
+.signinText h3{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.signinText p{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* ------right side form-------- */
+.signinRight{
+    padding: 20px;
+    width: 50%;
+}
+
+.signinRight h2{
+    margin-bottom: 20px;
+}
+
+form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+form input{
+    padding: 8px 15px;
+    min-width: 300px;
+    outline: none;
+}
+
+form .formData{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.signinRight button{
+    display: block;
+    padding: 10px;
+    border: none;
+    background-color: var(--primar-color);
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 80%;
+}
+
+.signinRight span{
+    font-size: 16px;
+}
+
+
+/* --------mobile screens-------- */
+@media screen and (max-width: 468px) {
+    .signinWrapper{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+        border: none;
+        margin-bottom: 10px;
+    }
+
+    .signinLeft{
+        width: 100%;
+    }
+
+    .signinText h3{
+        font-size: 32px;
+    }
+
+    .signinText p{
+        font-size: 24px;
+    }
+
+    .signinRight{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+    }
+
+    .signinRight h2{
+        font-size: 32px;
+        margin-top: 40px;
+    }
+
+    .signinRight form{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .signinRight .formData{
+        width: 100%;
+        padding: 0px 20px;
+    }
+
+    form input{
+        width: 100%;
+        font-size: 18px;
+        padding: 10px 0px;
+        border: 1px solid grey;
+    }
+
+    form label{
+        font-size: 18px;
+    }
+
+    .signinRight button{
+        font-size: 18px;
+        width: 90%;
+        padding: 20px;
+    }
+}

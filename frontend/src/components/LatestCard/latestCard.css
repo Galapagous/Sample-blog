@@ -1,0 +1,47 @@
+.latestCard{
+    width: 500px;
+    height: 300px;
+    border-radius: 3px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.latestCard h2{
+    position: absolute;
+    font-size: 1rem;
+    top: 20px;
+    right: 20px;
+}
+
+.latestText{
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    padding: 10px;
+    background-color: black;
+    width: 60%;
+    opacity: .8;
+}
+
+.latestText h2{
+    margin-bottom: 0px;
+}
+
+.latestText h1{
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.latestText span{
+    margin-bottom: 0px;
+}
+
+.latestText p{
+    width: 100%;
+    margin: 0;
+}

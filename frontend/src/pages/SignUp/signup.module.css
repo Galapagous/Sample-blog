@@ -1,0 +1,166 @@
+:root{
+    --primar-color: rgb(1, 1, 26);
+}
+
+.signupContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.signupWrapper{
+    width: 60%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    border: 1px solid var(--primar-color);
+}
+
+.signupLeft{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    border: 1px solid red;
+}
+
+.signupLeft::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--primar-color);
+    opacity: .7;
+    z-index: 2;
+}
+
+.signupLeft img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.signupText{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 3;
+    color: white;
+}
+
+.signupText h3{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.signupText p{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* ------right side form-------- */
+.signupRight{
+    padding: 20px;
+    width: 50%;
+}
+
+.signupRight h2{
+    margin-bottom: 20px;
+}
+
+form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+form input{
+    padding: 8px 15px;
+    min-width: 300px;
+    outline: none;
+}
+
+form .formData{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.signupRight button{
+    display: block;
+    padding: 12px;
+    border: none;
+    background-color: var(--primar-color);
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 80%;
+}
+
+.signupRight span{
+    font-size: 16px;
+}
+
+/* --------Mobile screen--------- */
+
+@media screen and (max-width: 480px) {
+    .signupContainer{
+        width: 100vw;
+        overflow-x: hidden;
+        padding: none;
+    }
+
+    .signupWrapper{
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        border: none;
+    }
+
+    .signupLeft{
+        width: 100%;
+        height: 60vh;
+    }
+
+    .signupText h3{
+        font-size: 2rem;
+    }
+
+    .signupText p{
+        font-size: 20px;
+    }
+
+
+    /* right side */
+
+    .signupRight{
+        width: 100%;
+    }
+
+    form{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .signupRight h2{
+        font-size: 2rem;
+    }
+
+    .signupRight button{
+        padding: 10px 10px;
+        width: 100%;
+    }
+}

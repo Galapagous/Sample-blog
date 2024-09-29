@@ -1,0 +1,32 @@
+.topicCard{
+    width: 250px;
+    height: 250px;
+    background-color: gray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: grey;
+    margin-bottom: 150px;
+}
+
+.topicCard img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.topicCard span{
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+.topicCard p{
+    margin-top: 5px;
+    font-size: .8rem;
+}
+
+.topicCard h2{
+    margin-top: 5px;
+    font-size: 1rem;
+}
